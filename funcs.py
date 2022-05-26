@@ -17,6 +17,9 @@ def run_bandits(a, t, mu, sigma):
     q_a = np.random.normal(mu, sigma, (10, 1))
     epsilon_dict = {}
 
+    if type(a) != int:
+        raise ValueError("the number of bandits (a) must be specified as an integer.")
+
     for epsilon in epsilons:
         Q_a = np.zeros((10, 1))
         N_a = np.zeros((10, 1))
@@ -56,3 +59,4 @@ def report_bandits(a, epsilon_dict):
             best_epsilon, dict_mean_reward[best_epsilon]
         )
     )
+    return best_epsilon
