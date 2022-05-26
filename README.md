@@ -7,4 +7,4 @@ Copyright (c) 2022 Nikolaus Houben
 
 # Project Description
 
-A short project showing some common functions to clean PV power data with some unit tests.
+A short project showing the n-armed bandit problem in RL with some unit tests.
