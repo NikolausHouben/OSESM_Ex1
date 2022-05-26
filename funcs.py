@@ -13,13 +13,12 @@ def run_bandits(a, t, mu, sigma):
 
     """
 
-    epsilons = [0.05, 0.1, 0.2, 0.3]
-    q_a = np.random.normal(mu, sigma, (10, 1))
-    epsilon_dict = {}
-
     if type(a) != int:
         raise ValueError("the number of bandits (a) must be specified as an integer.")
 
+    epsilons = [0.05, 0.1, 0.2, 0.3]
+    q_a = np.random.normal(mu, sigma, (10, 1))
+    epsilon_dict = {}
     for epsilon in epsilons:
         Q_a = np.zeros((10, 1))
         N_a = np.zeros((10, 1))
